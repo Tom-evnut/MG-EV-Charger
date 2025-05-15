@@ -33,22 +33,38 @@ NS_ :
 
 BS_: 
 BU_: OBC 
-BO_ 1806 ChargerMsg4: 8 Vector__XXX
+BO_ 1806 ChargerMsg4: 8 OBC
 
-BO_ 932 ChargerMsg3: 8 Vector__XXX
+BO_ 932 ChargerMsg3: 8 OBC
+   SG_ ChargerMsg3Sig1 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 930 ChargerMsg2: 8 Vector__XXX
+BO_ 930 ChargerMsg2: 8 OBC
+   SG_ ChargerMsg2Sig1 : 1|10@0+ (1,0) [0|1] "V" Vector__XXX
 
-BO_ 927 ChargerMsg1: 8 Vector__XXX
+BO_ 927 ChargerMsg1: 8 OBC
    SG_ ChargerLvVolts : 15|8@0+ (0.125,0) [0|1] "V" Vector__XXX
    SG_ ChargerLvAmps : 39|8@0+ (0.125,0) [0|1] "A" Vector__XXX
 
-BO_ 2147484452 ChargerMsg5: 8 Vector__XXX
+BO_ 2147484452 ChargerMsg5: 8 OBC
    SG_ ChargerHvVolt : 15|16@0- (0.02,0) [0|1] "V" Vector__XXX
+   SG_ ChargerTemp1 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ChargerTemp2 : 39|8@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 2147484451 ChargerMsg6: 8 Vector__XXX
+BO_ 2147484451 ChargerMsg6: 8 OBC
    SG_ ChargerPlugState : 47|8@0+ (1,0) [0|1] "" Vector__XXX
 
+BO_ 2147484477 OBCMsg7: 8 OBC
+   SG_ OBCMsg7Sig1 : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig3 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig2 : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig4 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig5 : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig6 : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig7 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ OBCMsg7Sig8 : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+
+CM_ SG_ 932 ChargerMsg3Sig1 "Matches_LV_Amps";
+CM_ SG_ 930 ChargerMsg2Sig1 "Matches_HV_reported";
 BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
 BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
 BA_DEF_ BO_ "matchingcriteria" INT 0 0;
@@ -59,4 +75,8 @@ BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "matchingcriteria" 0;
 BA_DEF_DEF_ "filterlabeling" 1;
 BA_DEF_DEF_ "isj1939dbc" 0;
-BA_ "GenMsgForegroundColor" BO_ 2147484452 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 930 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 927 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 2147484452 "#00aa00";
+BA_ "GenMsgForegroundColor" BO_ 2147484451 "#00aa00";
+BA_ "GenMsgForegroundColor" BO_ 2147484477 "#000000";
