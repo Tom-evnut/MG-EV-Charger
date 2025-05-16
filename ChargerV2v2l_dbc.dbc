@@ -33,14 +33,40 @@ NS_ :
 
 BS_:
 
-BU_: OBC
+BU_: VCU OBC
 
 
-BO_ 1169 ChargerMsg9: 8 Vector__XXX
+BO_ 668 VcuChargerMsg14: 8 VCU
 
-BO_ 951 ChargerMsg8: 8 Vector__XXX
+BO_ 802 VcuChargerMsg13: 8 VCU
 
-BO_ 827 ChargerMsg7: 8 Vector__XXX
+BO_ 923 VcuChargerMsg12: 8 VCU
+
+BO_ 918 VcuChargerMsg10: 8 VCU
+
+BO_ 922 VcuChargerMsg11: 8 VCU
+
+BO_ 916 VcuChargerMsg9: 8 VCU
+
+BO_ 835 VcuChargerMsg7: 8 VCU
+
+BO_ 814 VcuChargerMsg6: 8 VCU
+
+BO_ 667 VcuChargerMsg5: 8 VCU
+
+BO_ 831 VcuChargerMsg4: 8 VCU
+
+BO_ 497 VcuChargerMsg3: 8 VCU
+
+BO_ 663 VcuChargerMsg2: 8 VCU
+
+BO_ 412 VcuChargerMsg1: 8 VCU
+
+BO_ 1169 ChargerMsg9: 8 OBC
+
+BO_ 951 ChargerMsg8: 8 OBC
+
+BO_ 827 ChargerMsg7: 8 OBC
 
 BO_ 1806 ChargerMsg4: 8 OBC
 
@@ -62,7 +88,7 @@ BO_ 2147484452 ChargerMsg5: 8 OBC
 BO_ 2147484451 ChargerMsg6: 8 OBC
  SG_ ChargerPlugState : 47|8@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 2147484477 OBCMsg7: 8 OBC
+BO_ 2147484477 ChargerMsg10: 8 OBC
  SG_ OBCMsg7Sig1 : 7|8@0+ (1,0) [0|1] "" Vector__XXX
  SG_ OBCMsg7Sig3 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
  SG_ OBCMsg7Sig2 : 15|8@0+ (1,0) [0|1] "" Vector__XXX
@@ -74,6 +100,10 @@ BO_ 2147484477 OBCMsg7: 8 OBC
 
 
 
+CM_ BO_ 916 "Impacts power level, not direct current and voltage
+Byte 4 needs to be 0x10 to start";
+CM_ BO_ 835 "always 0s";
+CM_ BO_ 814 "Always 0s";
 CM_ SG_ 932 ChargerMsg3Sig1 "Matches_LV_Amps";
 CM_ SG_ 930 ChargerMsg2Sig1 "Matches_HV_reported";
 BA_DEF_ BO_  "GenMsgBackgroundColor" STRING ;
